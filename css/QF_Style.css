@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.Fixed_Side_NavBar {
+  height: 100%;
+  width: 75px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.Fixed_Side_NavBar a {
+  text-decoration: none;
+  display: block;
+  padding: 8px 8px 8px 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: rgb(0, 0, 0);
+  border: 2px solid transparent;
+}
+.Btn_Options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.Btn_Options .menu-title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.Fixed_Side_NavBar a:focus {
+  border-left: 2px solid #818181;
+}
+
+.Fixed_Side_NavBar a .fa-mobile {
+  font-size: 1.4em;
+}
+.Fixed_Side_NavBar a:hover {
+  color: #1cac58;
+}
+
+@media screen and (max-height: 450px) {
+  .Fixed_Side_NavBar {
+    padding-top: 15px;
+  }
+  .Fixed_Side_NavBar a {
+    font-size: 18px;
+  }
+}
+
+.Main_Content {
+  font-family: "Ubuntu";
+  margin-left: 75px; /* Same as the width of the Fixed_Side_NavBar */
+  border: rgb(255, 255, 255) solid 2px;
+  height: 100%;
+}
+
+.QF_Topnav {  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  margin-left: 75px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+.QF_Topnav a {
+  margin-left: 42px;
+  float: inline-start;
+  text-align: center;
+  text-decoration: none;
+}
+.QF_Topnav h3{
+  float: left;
+  text-align: center;
+}
+/* hidden Nav Bar*/
+.Hidden_NavBar_ColorSelection {
+  border-left: 2px solid rgba(0, 0, 0, 0.555);
+  margin-left: 75px; /* Same as the width of the sidenav */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.Hidden_NavBar_ColorSelection a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.Hidden_NavBar_ColorSelection a:hover {
+  color: #1cac58;
+}
+.Hidden_NavBar_ColorSelection h2 {
+  text-align: center;
+}
+
+.Hidden_NavBar_ColorSelection .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.Color_Palette_Container {
+  text-align: left;
+  padding: 10px;
+  margin: 10px;
+}
+
+.Color_P {
+  position: relative;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  /*TRBL Top Right Bottom Left*/
+}
+
+.Color_P_Btn1 {
+  background: linear-gradient(
+    90deg,
+    rgb(36, 36, 36) 50%,
+    rgb(135, 57, 249) 50%
+  );
+}
+
+.Color_P_Btn2{
+  background: linear-gradient(
+    90deg,
+    rgb(36, 36, 36) 50%,
+    rgb(24, 185, 132) 50%
+  );
+}
+.Color_P_Btn4{
+  background: linear-gradient(
+    90deg,
+    rgb(24, 24, 24)  50%,
+    rgb(255, 107, 63)  50%
+  );
+}
+.Color_P_Btn3{
+  background: linear-gradient(
+    90deg,
+    rgb(240, 240, 249) 50%,
+    rgb(106, 38, 205)  50%
+  );
+}
+.Color_P:hover {
+  transform: scale(1.1);
+}
+
+.TickMark {
+  position: absolute;
+  top: -8px;
+  right: -6px;
+  /*display: flex;*/
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: rgb(57, 204, 82) none repeat scroll 0% 0%;
+  color: white;
+  font-size: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-height: 450px) {
+  .Hidden_NavBar_ColorSelection {
+    padding-top: 15px;
+  }
+  .Hidden_NavBar_ColorSelection a {
+    font-size: 18px;
+  }
+}
+.HomeSettingBar {
+  border-left: 2px solid rgba(0, 0, 0, 0.555);
+  margin-left: 75px; /* Same as the width of the sidenav */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.HomeSettingBar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.HomeSettingBar a:hover {
+  color: #1cac58;
+}
+.HomeSettingBar h3{
+  text-align: center;
+}
+
+.HomeSettingBar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.HomeSettingBar_Controls{
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+@media screen and (max-height: 450px) {
+  .HomeSettingBar {
+    padding-top: 15px;
+  }
+  .HomeSettingBar a {
+    font-size: 18px;
+  }
+}
+.AboutSettingBar {
+  border-left: 2px solid rgba(0, 0, 0, 0.555);
+  margin-left: 75px; /* Same as the width of the sidenav */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.AboutSettingBar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.AboutSettingBar a:hover {
+  color: #1cac58;
+}
+.AboutSettingBar h3{
+  text-align: center;
+}
+
+.AboutSettingBar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.AboutSettingBar_Controls{
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+@media screen and (max-height: 450px) {
+  .AboutSettingBar {
+    padding-top: 15px;
+  }
+  .AboutSettingBar a {
+    font-size: 18px;
+  }
+}
+.ProjectSettingBar {
+  border-left: 2px solid rgba(0, 0, 0, 0.555);
+  margin-left: 75px; /* Same as the width of the sidenav */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.ProjectSettingBar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.ProjectSettingBar a:hover {
+  color: #1cac58;
+}
+.ProjectSettingBar h3{
+  text-align: center;
+}
+
+.ProjectSettingBar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.ProjectSettingBar_Controls{
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+@media screen and (max-height: 450px) {
+  .ProjectSettingBar {
+    padding-top: 15px;
+  }
+  .ProjectSettingBar a {
+    font-size: 18px;
+  }
+}
+.ContactSettingBar {
+  border-left: 2px solid rgba(0, 0, 0, 0.555);
+  margin-left: 75px; /* Same as the width of the sidenav */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.ContactSettingBar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.ContactSettingBar a:hover {
+  color: #1cac58;
+}
+.ContactSettingBar h3{
+  text-align: center;
+}
+
+.ContactSettingBar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.ContactSettingBar_Controls{
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+@media screen and (max-height: 450px) {
+  .ContactSettingBar {
+    padding-top: 15px;
+  }
+  .ContactSettingBar a {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/TPL_Style.css">
+    <link rel="stylesheet" href="css/QF_Style.css">
+    <script src="JS/QF_App.js"></script>
+    <title>QuickFolio</title>
+</head>
+
+<body>
+    <div class="Fixed_Side_NavBar">
+        <div class="Btn_Options">
+            <a href="javascript:void(0)" onclick="openNav_ColorSelection()"><img src="Images/color-palette.png" alt=""
+                    style="text-align: center;">
+                <p class="menu-title">Color</p>
+            </a>
+        </div>
+
+        <div class="Btn_Options">
+            <a href="#home" onclick="openNav_SettingBar()"><img src="Images/home.png" alt=""
+                    style="text-align: center;">
+                <p class="menu-title">Home</p>
+            </a>
+        </div>
+
+        <div class="Btn_Options">
+            <a href="#about" onclick="openNav_AboutSelection()"><img src="Images/aboutimg.png" alt=""
+                    style="text-align: center;">
+                <p class="menu-title">About</p>
+            </a>
+        </div>
+
+        <div class="Btn_Options">
+            <a href="javascript:void(0)" onclick="openNav_ProjectSelection()"><img src="Images/briefing.png" alt=""
+                    style="text-align: center;">
+                <p class="menu-title">Project</p>
+            </a>
+        </div>
+
+        <div class="Btn_Options">
+            <a href="javascript:void(0)" onclick="openNav_ContactSelection()"><img src="Images/contact.png" alt=""
+                    style="text-align: center;">
+                <p class="menu-title">Contact</p>
+            </a>
+        </div>
+
+        <div class="info">
+            <a href="javascript:void(0)" onclick=""><img src="Images/information.png" alt=""
+                    style="text-align: center;">
+                <p class="menu-title">Info</p>
+            </a>
+        </div>
+    </div>
+
+
+
+    <div id="Hidden_NavBar_ColorSelection" class="Hidden_NavBar_ColorSelection">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav_ColorSelection()">&times;</a>
+        <h2>Color Palette</h2>
+        <div class="Color_Palette_Container">
+            <button class="Color_P Color_P_Btn1" onclick="changeColour('222831')" id="Color_P_Btn1"></button>
+            <button class="Color_P Color_P_Btn2" onclick="changeColour('222832')" id="Color_P_Btn2"></button>
+            <button class="Color_P Color_P_Btn3" onclick="changeColour('222832')" id="Color_P_Btn3"></button>
+            <button class="Color_P Color_P_Btn4" onclick="changeColour('222832')" id="Color_P_Btn4"></button>
+            <button class="Color_P Color_P_Btn5" onclick="changeColour('222832')" id="Color_P_Btn5"></button>
+            <button class="Color_P Color_P_Btn6" onclick="changeColour('222832')" id="Color_P_Btn6"></button>
+            <button class="Color_P Color_P_Btn7" onclick="changeColour('222832')" id="Color_P_Btn7"></button>
+            <button class="Color_P Color_P_Btn8" onclick="changeColour('222832')" id="Color_P_Btn8"></button>
+            <button class="Color_P Color_P_Btn9" onclick="changeColour('222832')" id="Color_P_Btn9"></button>
+            <button class="Color_P Color_P_Btn10" onclick="changeColour('222832')" id="Color_P_Btn10"></button>
+        </div>
+    </div>
+
+
+    <div id="HomeSettingBar" class="HomeSettingBar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav_SettingBar()">&times;</a>
+        <h3>Home Section</h3>
+        <div class="HomeSettingBar_Controls">
+
+            <input class="form-control" type="text" placeholder="Your Name" aria-label="Your Name"
+                style="margin-bottom: 10px;" id="NameInput" maxlength="30">
+            <input class="form-control" type="text" id="BioInput" maxlength="30" placeholder="Short Bio or Role"
+                aria-label="Short Bio or Role">
+
+            <hr style="width: 100%; margin-top: 12px;">
+
+            <fieldset class="border p-2">
+                <legend style="font-size: 20px;">Avatar</legend>
+                <div class="mb-3">
+                    <input class="form-control form-control-sm" id="filetag" placeholder="Upload Avatar" type="file">
+                </div>
+                <label for="customRange2" class="form-label">Avatar Size: <span id="width_range">150px</span></label>
+                <input type="range" class="form-range" id="customRange2" min="80" max="200">
+            </fieldset>
+
+            <hr style="width: 100%; margin-bottom: 10px; margin-top: 10px; visibility: hidden;">
+
+            <fieldset class="border p-2">
+                <legend style="font-size: 20px;">Button</legend>
+                <div class="mb-3">
+                    <input class="form-control" type="text" placeholder="Button Text" maxlength="15"
+                        aria-label="Button Text" id="HomeButtonTextInput">
+                </div>
+                <label for="customRange1" class="form-label">Button Size: <span id="BUTTON_2_SIZE_Val"></span></label>
+                <input type="range" class="form-range" id="customRange1">
+            </fieldset>
+
+        </div>
+    </div>
+
+
+
+    <div id="AboutSettingBar" class="AboutSettingBar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav_About_SettingBar()">&times;</a>
+        <h3>About Section</h3>
+        <div class="AboutSettingBar_Controls">
+            <textarea class="form-control" id="AboutYourInput" rows="3" style="margin-bottom: 10px;"
+                placeholder="About Yourself"></textarea>
+
+            <hr style="width: 90%; margin-top: 12px; margin-bottom: 12px;">
+
+            <fieldset class="border p-2">
+                <legend style="font-size: 20px;">Add Skills</legend>
+                <input class="form-control" type="text" placeholder="Enter a skill" aria-label="Enter a skill"
+                    style="margin-bottom: 10px;" id="SkillInput" maxlength="30">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary btn-sm" type="button" id="AddSkill">Add</button>
+                    <button class="btn btn-primary btn-sm" type="button" id="ResetSkill">Reset</button>
+                </div>
+            </fieldset>
+            <div class="alert alert-danger" role="alert" style="margin-top: 12px;">
+                Note: To Remove Default Skills Click on Reset Button
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="ProjectSettingBar" class="ProjectSettingBar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav_Project_SettingBar()">&times;</a>
+        <h3>Project Section</h3>
+        <div class="ProjectSettingBar_Controls">
+            <input class="form-control" type="text" placeholder="Your Github Username" aria-label="Your Github Username"
+                style="margin-bottom: 10px;" id="GithubNameInput" maxlength="25">
+            <input class="form-control" type="text" placeholder="Github Profile Url" aria-label="Github Profile Url"
+                style="margin-bottom: 10px;" id="GithubUrlInput">
+            <fieldset class="border p-2">
+                <legend style="font-size: 18px;">Add Project Card</legend>
+                <input class="form-control" type="text" placeholder="Enter project name" aria-label="Enter project name"
+                    style="margin-bottom: 10px;" id="ProjectNameInput" maxlength="30">
+                <textarea class="form-control" id="ProjectInfoInput" rows="3" style="margin-bottom: 10px;"
+                    placeholder="About Your Project"></textarea>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary btn-sm" type="button" id="AddCard">Add Card</button>
+                    <button class="btn btn-primary btn-sm" type="button" id="ResetCard">Reset Cards</button>
+                </div>
+            </fieldset>
+            <hr style="width: 90%; margin-top: 10px; margin-bottom: 10px; visibility: hidden;">
+            <div class="alert alert-danger" role="alert">
+                Note: To Remove Default Card Click on Reset Button
+            </div>
+            <!--<hr style="width: 90%; margin-top: 12px; margin-bottom: 12px;">-->
+        </div>
+    </div>
+
+
+
+    <div id="ContactSettingBar" class="ContactSettingBar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav_Contact_SettingBar()">&times;</a>
+        <h3>Project Section</h3>
+        <div class="ContactSettingBar_Controls">
+            <fieldset class="border p-2">
+                <legend style="font-size: 16px;">Add Social Media Link</legend>
+                <select class="form-select" aria-label="Default select example" id="SelectIcon">
+                    <option selected>Select Icon</option>
+                </select>
+                <input class="form-control" type="text" placeholder="Enter URL" aria-label="Enter URL"
+                    style="margin-top: 10px;" id="AddLinkUrl">
+                <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 10px;">
+                    <button class="btn btn-primary btn-sm" type="button" id="AddLink">Add Link</button>
+                    <button class="btn btn-primary btn-sm" type="button" id="ResetLink">Reset Link</button>
+                </div>
+            </fieldset>
+            <hr style="width: 90%; margin-top: 10px; margin-bottom: 10px; visibility: hidden;">
+            <div class="alert alert-danger" role="alert">
+                Note: To Remove Default Link Click on Reset Button
+            </div>
+            <!--<hr style="width: 90%; margin-top: 12px; margin-bottom: 12px;">-->
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-light bg-light" style="margin-left: 75px;">
+        <div class="container-fluid">
+            <a class="navbar-brand">QuickFolio</a>
+            <form class="d-flex">
+                <button style="margin-right: 60px;" class="btn btn-primary" id="GETCODE">Get Source Code</button>
+            </form>
+        </div>
+    </nav>
+    <div class="Main_Content" id="Main_Content">
+
+        <!-- Back To Top Button -->
+        <button onclick="topFunction()" id="Back2Top" title="Go to top">
+            <icon class="fa fa-arrow-up"></icon>
+        </button>
+
+
+        <!-- Navigation Bar -->
+        <nav class="TPL_NavBar">
+            <label class="TPL_NavBar-toggle" for="chkToggle">
+                <i class="fa fa-bars"></i>
+            </label>
+            <a href="#" class="TPL_logo">logo</a>
+            <input type="checkbox" id="chkToggle"></input>
+            <ul class="TPL_Main_NavBar" id="js-menu">
+                <li>
+                    <a href="#home" class="nav-links">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-links">About</a>
+                </li>
+                <li>
+                    <a href="#Project" class="nav-links">Project</a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-links">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- Home Section -->
+        <section id="home" class="home">
+            <div class="Hometxtwrapper">
+                <img src="https://aras.kntu.ac.ir/wp-content/uploads/2019/05/hoodie-.png" id="1_AVATAR_IMG">
+                <h2 id="3_NAME">Hello, I'm Jay</h2>
+                <h3 id="4_SHORTBIO">a full stack developer</h3>
+                <a href="#Contact" class="ContactBtn" id="2_BUTTON">Say Hii</a><br>
+                <!--<a href="#about" class="scrolldown"><i class="fa fa-angle-down"></i></a>-->
+            </div>
+        </section>
+
+
+        <!-- About Me -->
+        <section id="about" class="about">
+            <div class="AbouttxtWrapper">
+                <h1>About Me</h1>
+                <hr>
+                <p id="5_ABOUTYOU">Hello I'm Jay, 18 year old Information Technology Engineering student. I am self
+                    taught developer
+                    and
+                    make apps and website. i also interest in UI and UX. </br>Currently i am enhancing my android
+                    developement skill.
+                </p>
+                <a href="#" class="ResumeBTN">Resume</a>
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <ul id="6_Skill">
+                        <li>UI</li>
+                        <li>Front End Development</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Section -->
+        <section id="Project" class="Project">
+            <div class="ProjecttxtWrapper">
+                <h1>Project</h1>
+                <hr style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 17px; text-align: center; padding-left: 12px; padding-right: 12px;">Kindly
+                    visit
+                    My Github Profile for My Projects:
+                    <span><a href="#" id="GITHUBURL">idname</a></span>
+                </h3>
+
+                <div class="wrapper" id="CardWrapper">
+                    <div class="card">
+
+                        <div class="txtWrapper">
+                            <h3 class="card-title">CARD TITLE</h3>
+                            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random
+                                text.
+                                It
+                                has roots in a
+                                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                            <button class="card-btn">READ MORE</button>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="txtWrapper">
+                            <h3 class="card-title">CARD TITLE</h3>
+                            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random
+                                text.
+                                It
+                                has roots
+                                in a
+                                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                            <button class="card-btn">READ MORE</button>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <div class="txtWrapper">
+                            <h3 class="card-title">CARD TITLE</h3>
+                            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random
+                                text.
+                                It
+                                has roots
+                                in a
+                                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                            <button class="card-btn">READ MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="ContacttxtWrapper">
+                <h1>Get in Touch</h1>
+                <hr>
+            </div>
+            <footer>
+                <div class="w3hubs-footer">
+                    <div class="w3hubs-icon">
+                        <ul id="LinkWrapper">
+                            <li><a href="#" target="black"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" target="black"><i class="fa fa-github"></i></a></li>
+                            <li><a href="#" target="black"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="#" target="black"><i class="fa fa-codepen"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-end">
+                    <p>Desing & Coded By: <a href="https://JayPrajapati.xyz/">JayPrajapati.xyz</a></p>
+                    <p>Copyright © 2020 All Rights Reserved</p>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <script>
+        //Click Anywhere to close nav bar
+        document.getElementById('Main_Content').addEventListener('click', closeNav_ColorSelection)
+
+
+
+        function openNav_ColorSelection() {
+            document.getElementById("Hidden_NavBar_ColorSelection").style.width = "250px";
+        }
+        function closeNav_ColorSelection() {
+            document.getElementById("Hidden_NavBar_ColorSelection").style.width = "0";
+        }
+
+
+
+        function openNav_AboutSelection() {
+            document.getElementById("AboutSettingBar").style.width = "250px";
+        }
+        function closeNav_About_SettingBar() {
+            document.getElementById("AboutSettingBar").style.width = "0";
+        }
+
+
+        function openNav_ContactSelection() {
+            document.getElementById("ContactSettingBar").style.width = "250px";
+        }
+        function closeNav_Contact_SettingBar() {
+            document.getElementById("ContactSettingBar").style.width = "0";
+        }
+
+
+        function openNav_ProjectSelection() {
+            document.getElementById("ProjectSettingBar").style.width = "250px";
+        }
+        function closeNav_Project_SettingBar() {
+            document.getElementById("ProjectSettingBar").style.width = "0";
+        }
+
+
+
+
+        function openNav_SettingBar() {
+            document.getElementById("HomeSettingBar").style.width = "250px";
+        }
+
+        function closeNav_SettingBar() {
+            document.getElementById("HomeSettingBar").style.width = "0";
+        }
+
+        function PhoneView() {
+            var TPL_Width = document.getElementById("Main_Content").style.width;
+            if (TPL_Width === "") {
+                document.getElementById("Main_Content").style.width = "";
+            } else {
+                document.getElementById("Main_Content").style.width = "50px";
+            }
+        }
+
+
+
+        var Color_P_Btn1 = document.getElementById("Color_P_Btn1");
+        var Color_P_Btn2 = document.getElementById("Color_P_Btn2");
+        var tickcode = `<span class="TickMark" id="spn"><i class="fa fa-check"></i></span>`;
+        //var output = document.getElementById("output");
+        function changeColour(value) {
+            switch (value) {
+                case '222831':
+                    if (Color_P_Btn1.click) {
+                        Color_P_Btn2.innerHTML = "";
+                    }
+                    if (Color_P_Btn1.click) {
+                        Color_P_Btn1.innerHTML = tickcode;
+                    }
+                    //output.innerText = "222831";
+                    break;
+                case '222832':
+                    if (Color_P_Btn2.click) {
+                        Color_P_Btn1.innerHTML = "";
+                    }
+                    if (Color_P_Btn2.click) {
+                        Color_P_Btn2.innerHTML = tickcode;
+                    }
+                    //output.innerText = "222832";
+                    break;
+            }
+        }
+
+        /*-----------------TPL Back2Top Code-----------------------------------*/
+        var mybutton = document.getElementById("Back2Top");
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+                mybutton.style.display = "block";
+            } else { mybutton.style.display = "none"; }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
