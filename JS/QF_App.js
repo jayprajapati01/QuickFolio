@@ -410,16 +410,13 @@ let SMC_CONTACT_LINK;
         color: var(--Txt_Primary_Color);
       }
       
-      .scrolldown i {
-        font-size: 30px;
-      }
-      
+  
       /* Responsive Design*/
       @media (max-width: 380px) {
         .home h2 {
           margin-bottom: 15px;
           color: var(--Txt_Primary_Color);
-          font-size: 40px;
+          font-size: 35px;
         }
         .home h3 {
           color: var(--Txt_Primary_Color);
@@ -427,6 +424,9 @@ let SMC_CONTACT_LINK;
         }
         .Hometxtwrapper {
           margin-bottom: 20%;
+        }
+        .Hometxtwrapper img {
+          width: 110px;
         }
       
         .ContactBtn {
@@ -520,17 +520,17 @@ let SMC_CONTACT_LINK;
       }
       .Project {
         height: auto;
-        /* background-color: var(--main_bg_color);*/
+        background-color: var(--Main_Bg_Color);
       }
       
       .ProjecttxtWrapper h1 {
-        color: var(--Txt_Secondary_Color);
+        color: var(--Txt_Primary_Color);
         padding-top: 30px;
         font-size: 35px;
         text-align: center;
       }
       .ProjecttxtWrapper h3 {
-        color: var(--Txt_Secondary_Color);
+        color: var(--Txt_Primary_Color);
       }
       .txtWrapper h3 {
         color: var(--Txt_Primary_Color);
@@ -678,11 +678,10 @@ let SMC_CONTACT_LINK;
         margin: auto;
         background: var(--Main_Bg_Color);
         padding: 10px;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
       }
       .footer-end p {
-        font-size: 16px;
         text-align: center;
         color: var(--Txt_Primary_Color);
         font-weight: bold;
@@ -806,9 +805,8 @@ let SMC_CONTACT_LINK;
                 </div>
 
                 <div class="footer-end">
-                    <p>Desing & Coded By: <a href="https://JayPrajapati.xyz/">JayPrajapati.xyz</a></p>
-                    <p>Copyright © 2020 All Rights Reserved</p>
-                </div>
+                <p>Made With <span style="color: red;">❤</span> by <a href="https://quickfolio.netlify.app" target="_blank">QuickFolio</a></p>
+            </div>
             </footer>
         </section>
 <script>
