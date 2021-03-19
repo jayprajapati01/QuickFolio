@@ -5,21 +5,23 @@
 }
 
 body {
+  background: #ffffff;
   height: 100%;
 }
 html {
   scroll-behavior: smooth;
   height: 100%;
 }
-
 .Fixed_Side_NavBar {
-  height: 100%;
+  margin: 12px;
+  border-radius: 12px;
+  height: auto;
   width: 75px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #f5f5f5;
+  background-color: #d8ebe4;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -38,13 +40,7 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 80px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
+
 .Btn_Options .menu-title {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -69,35 +65,17 @@ html {
 }
 
 .Main_Content {
+  margin-right: 11px;
+  margin-top: 12px;
   font-family: "Ubuntu";
-  margin-left: 75px; /* Same as the width of the Fixed_Side_NavBar */
-  border: rgb(255, 255, 255) solid 2px;
+  margin-left: 98px; /* Same as the width of the Fixed_Side_NavBar */
   height: 100%;
 }
 
-.QF_Topnav {  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 10px;
-  margin-left: 75px;
-  overflow: hidden;
-  background-color: rgb(255, 255, 255);
-}
-
-.QF_Topnav a {
-  margin-left: 42px;
-  float: inline-start;
-  text-align: center;
-  text-decoration: none;
-}
-.QF_Topnav h3{
-  float: left;
-  text-align: center;
-}
 /* hidden Nav Bar*/
 .Hidden_NavBar_ColorSelection {
-  border-left: 2px solid rgba(0, 0, 0, 0.555);
-  margin-left: 75px; /* Same as the width of the sidenav */
+  /*border-left: 2px solid rgba(0, 0, 0, 0.555);*/
+  margin-left: 98px; /* Same as the width of the sidenav */
   height: 100%;
   width: 0;
   position: fixed;
@@ -161,25 +139,25 @@ html {
   );
 }
 
-.Color_P_Btn2{
+.Color_P_Btn2 {
   background: linear-gradient(
     90deg,
     rgb(36, 36, 36) 50%,
     rgb(24, 185, 132) 50%
   );
 }
-.Color_P_Btn4{
+.Color_P_Btn4 {
   background: linear-gradient(
     90deg,
-    rgb(24, 24, 24)  50%,
-    rgb(255, 107, 63)  50%
+    rgb(24, 24, 24) 50%,
+    rgb(255, 107, 63) 50%
   );
 }
-.Color_P_Btn3{
+.Color_P_Btn3 {
   background: linear-gradient(
     90deg,
     rgb(240, 240, 249) 50%,
-    rgb(106, 38, 205)  50%
+    rgb(106, 38, 205) 50%
   );
 }
 .Color_P:hover {
@@ -214,8 +192,8 @@ html {
   }
 }
 .HomeSettingBar {
-  border-left: 2px solid rgba(0, 0, 0, 0.555);
-  margin-left: 75px; /* Same as the width of the sidenav */
+  /*border-left: 2px solid rgba(0, 0, 0, 0.555);*/
+  margin-left: 98px; /* Same as the width of the sidenav */
   height: 100%;
   width: 0;
   position: fixed;
@@ -240,7 +218,7 @@ html {
 .HomeSettingBar a:hover {
   color: #1cac58;
 }
-.HomeSettingBar h3{
+.HomeSettingBar h3 {
   text-align: center;
 }
 
@@ -251,7 +229,7 @@ html {
   font-size: 36px;
   margin-left: 50px;
 }
-.HomeSettingBar_Controls{
+.HomeSettingBar_Controls {
   margin-top: 12px;
   margin-left: 12px;
   margin-right: 12px;
@@ -265,8 +243,8 @@ html {
   }
 }
 .AboutSettingBar {
-  border-left: 2px solid rgba(0, 0, 0, 0.555);
-  margin-left: 75px; /* Same as the width of the sidenav */
+  /*border-left: 2px solid rgba(0, 0, 0, 0.555);*/
+  margin-left: 98px; /* Same as the width of the sidenav */
   height: 100%;
   width: 0;
   position: fixed;
@@ -291,7 +269,7 @@ html {
 .AboutSettingBar a:hover {
   color: #1cac58;
 }
-.AboutSettingBar h3{
+.AboutSettingBar h3 {
   text-align: center;
 }
 
@@ -302,7 +280,7 @@ html {
   font-size: 36px;
   margin-left: 50px;
 }
-.AboutSettingBar_Controls{
+.AboutSettingBar_Controls {
   margin-top: 12px;
   margin-left: 12px;
   margin-right: 12px;
@@ -316,8 +294,8 @@ html {
   }
 }
 .ProjectSettingBar {
-  border-left: 2px solid rgba(0, 0, 0, 0.555);
-  margin-left: 75px; /* Same as the width of the sidenav */
+  /*border-left: 2px solid rgba(0, 0, 0, 0.555);*/
+  margin-left: 98px; /* Same as the width of the sidenav */
   height: 100%;
   width: 0;
   position: fixed;
@@ -342,7 +320,7 @@ html {
 .ProjectSettingBar a:hover {
   color: #1cac58;
 }
-.ProjectSettingBar h3{
+.ProjectSettingBar h3 {
   text-align: center;
 }
 
@@ -353,7 +331,7 @@ html {
   font-size: 36px;
   margin-left: 50px;
 }
-.ProjectSettingBar_Controls{
+.ProjectSettingBar_Controls {
   margin-top: 12px;
   margin-left: 12px;
   margin-right: 12px;
@@ -367,8 +345,8 @@ html {
   }
 }
 .ContactSettingBar {
-  border-left: 2px solid rgba(0, 0, 0, 0.555);
-  margin-left: 75px; /* Same as the width of the sidenav */
+  /*border-left: 2px solid rgba(0, 0, 0, 0.555);*/
+  margin-left: 98px; /* Same as the width of the sidenav */
   height: 100%;
   width: 0;
   position: fixed;
@@ -393,7 +371,7 @@ html {
 .ContactSettingBar a:hover {
   color: #1cac58;
 }
-.ContactSettingBar h3{
+.ContactSettingBar h3 {
   text-align: center;
 }
 
@@ -404,7 +382,7 @@ html {
   font-size: 36px;
   margin-left: 50px;
 }
-.ContactSettingBar_Controls{
+.ContactSettingBar_Controls {
   margin-top: 12px;
   margin-left: 12px;
   margin-right: 12px;
