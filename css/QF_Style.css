@@ -19,7 +19,7 @@ html {
   width: 75px;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 50px;
   left: 0;
   background-color: #d8ebe4;
   overflow-x: hidden;
