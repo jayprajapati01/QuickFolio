@@ -395,3 +395,45 @@ html {
     font-size: 18px;
   }
 }
+.navbarr {
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 64, 128, 0.05);
+  width: 100%;
+}
+.navbarr + .container {
+  padding-top: 70px;
+}
+
+.navbarr a {
+  font-size: 18px;
+  float: left;
+  display: block;
+  color: var(--Navbar_Text_Color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbarr i {
+  font-size: 22px;
+  float: right;
+  display: block;
+  color: var(--Navbar_Text_Color);
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbarr .fa-align-left{
+  float: left;
+}
+@media only screen and (max-width: 400px) {
+  .navbarr a {
+    font-size: 15px;
+  }
+  .navbarr i {
+    font-size: 18px !important;
+    padding: 16px 16px;
+  }
+}
