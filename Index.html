@@ -23,7 +23,7 @@
         <a href="https://jayprajapati01.github.io" target="_blank">Developer</a>
         <i class="fa fa-adjust"></i>
     </div>
-    <div class="Fixed_Side_NavBar">
+    <div class="Fixed_Side_NavBar" id="Fixed_Side_NavBar">
         <div class="Btn_Options">
             <a href="javascript:void(0)" onclick="openNav_ColorSelection()"><img src="Images/color-palette.png" alt=""
                     style="text-align: center;">
@@ -355,7 +355,17 @@
         //Click Anywhere to close nav bar
         document.getElementById('Main_Content').addEventListener('click', closeNav_ColorSelection)
 
-
+function OpenControlBar() {
+            var Fixed_Side_NavBar = document.getElementById("Fixed_Side_NavBar");
+            var Main_Content = document.getElementById("Main_Content");
+            if (Fixed_Side_NavBar.style.width !== "75px") {
+                Main_Content.style.marginLeft = "98px";
+                document.getElementById("Fixed_Side_NavBar").style.width = "75px";
+            } else {
+                Main_Content.style.marginLeft = "12px";
+                document.getElementById("Fixed_Side_NavBar").style.width = "0px";
+            }
+        }
 
         function openNav_ColorSelection() {
             document.getElementById("Hidden_NavBar_ColorSelection").style.width = "250px";
