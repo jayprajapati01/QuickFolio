@@ -24,6 +24,7 @@ html {
   background-color: #d8ebe4;
   overflow-x: hidden;
   padding-top: 20px;
+  transition: 0.5s;
 }
 
 .Fixed_Side_NavBar a {
