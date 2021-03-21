@@ -16,7 +16,7 @@ html {
   margin: 12px;
   border-radius: 12px;
   height: auto;
-  width: 75px;
+  width: 0px;
   position: fixed;
   z-index: 1;
   top: 50px;
@@ -68,8 +68,9 @@ html {
   margin-right: 11px;
   margin-top: 12px;
   font-family: "Ubuntu";
-  margin-left: 98px; /* Same as the width of the Fixed_Side_NavBar */
+  margin-left: 12px; /* Same as the width of the Fixed_Side_NavBar */
   height: 100%;
+  transition: 0.5s;
 }
 
 /* hidden Nav Bar*/
